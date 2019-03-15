@@ -183,6 +183,26 @@ namespace RoboticParkingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap homeblue {
+            get {
+                object obj = ResourceManager.GetObject("homeblue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap homeorange {
+            get {
+                object obj = ResourceManager.GetObject("homeorange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ikona {
             get {
                 object obj = ResourceManager.GetObject("ikona", resourceCulture);
@@ -296,6 +316,16 @@ namespace RoboticParkingSystem.Properties {
         internal static System.Drawing.Bitmap strelica2 {
             get {
                 object obj = ResourceManager.GetObject("strelica2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warning {
+            get {
+                object obj = ResourceManager.GetObject("warning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

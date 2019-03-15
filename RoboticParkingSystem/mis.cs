@@ -214,7 +214,7 @@ namespace RoboticParkingSystem
                     kraj.Visible = true;
                     //poruka.Visible = true;
                     upute.Visible = false;
-                    zeleno.BackColor = Color.FromArgb(120, 179, 72);
+                    //zeleno.BackColor = Color.FromArgb(120, 179, 72);
                     timer1.Enabled = true;
                     timer1.Start();
                     panel5.Visible = true;
@@ -232,7 +232,7 @@ namespace RoboticParkingSystem
                     kraj.Visible = false;
                     poruka.Visible = false;
                     upute.Visible = true;
-                    zeleno.BackColor = Color.SlateGray;
+                    //zeleno.BackColor = Color.SlateGray;
                 }
                 //Nova pozovija kursora
                 if (auto.Location.X > 0 && auto.Location.X < 480 && auto.Location.Y > 0 && auto.Location.Y < 300)

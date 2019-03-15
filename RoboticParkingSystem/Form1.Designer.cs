@@ -39,6 +39,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.login = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,12 +60,13 @@
             // lozinkatxt
             // 
             this.lozinkatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lozinkatxt.Location = new System.Drawing.Point(0, 2);
+            this.lozinkatxt.Location = new System.Drawing.Point(0, 1);
             this.lozinkatxt.Margin = new System.Windows.Forms.Padding(2);
             this.lozinkatxt.Name = "lozinkatxt";
             this.lozinkatxt.PasswordChar = '*';
             this.lozinkatxt.Size = new System.Drawing.Size(201, 26);
             this.lozinkatxt.TabIndex = 4;
+            this.lozinkatxt.TextChanged += new System.EventHandler(this.lozinkatxt_TextChanged);
             this.lozinkatxt.Enter += new System.EventHandler(this.lozinkatxt_Enter);
             this.lozinkatxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lozinkatxt_KeyDown);
             this.lozinkatxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lozinkatxt_KeyPress);
@@ -99,14 +101,14 @@
             this.panel1.Controls.Add(this.lozinkatxt);
             this.panel1.Location = new System.Drawing.Point(324, 211);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 28);
+            this.panel1.Size = new System.Drawing.Size(242, 28);
             this.panel1.TabIndex = 10;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox3.Image = global::RoboticParkingSystem.Properties.Resources.index1;
-            this.pictureBox3.Location = new System.Drawing.Point(175, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(174, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -150,6 +152,11 @@
             this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.login_Click_1);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
+            this.toolTip1.ToolTipTitle = "Caps lock je uključen";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +196,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button login;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

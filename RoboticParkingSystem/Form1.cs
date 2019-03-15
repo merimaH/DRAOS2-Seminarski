@@ -146,5 +146,10 @@ namespace RoboticParkingSystem
                 this.Hide();
             }
         }
+
+        private void lozinkatxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

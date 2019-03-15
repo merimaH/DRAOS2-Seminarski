@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.unos = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,11 +46,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.uplata = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.uplata.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,19 +72,6 @@
             this.panel1.Size = new System.Drawing.Size(182, 544);
             this.panel1.TabIndex = 0;
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Image = global::RoboticParkingSystem.Properties.Resources.help_icon_18_24;
-            this.button4.Location = new System.Drawing.Point(74, 430);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(44, 23);
-            this.button4.TabIndex = 10;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
@@ -90,7 +79,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(0, 314);
+            this.button3.Location = new System.Drawing.Point(0, 296);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(182, 41);
             this.button3.TabIndex = 5;
@@ -126,17 +115,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RoboticParkingSystem.Properties.Resources.ikona;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 26);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 172);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(186, 0);
@@ -163,10 +141,10 @@
             this.panel3.Controls.Add(this.uplata);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.unos);
-            this.panel3.Location = new System.Drawing.Point(178, -1);
+            this.panel3.Location = new System.Drawing.Point(177, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(806, 544);
+            this.panel3.Size = new System.Drawing.Size(807, 544);
             this.panel3.TabIndex = 3;
             // 
             // panel4
@@ -178,7 +156,7 @@
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(3, 0);
+            this.panel4.Location = new System.Drawing.Point(4, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(800, 540);
             this.panel4.TabIndex = 9;
@@ -280,6 +258,7 @@
             // uplata
             // 
             this.uplata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.uplata.Controls.Add(this.button5);
             this.uplata.Location = new System.Drawing.Point(58, 38);
             this.uplata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uplata.Name = "uplata";
@@ -302,6 +281,42 @@
             this.label1.Text = "Unos korisnika:";
             this.label1.Visible = false;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Image = global::RoboticParkingSystem.Properties.Resources.help_icon_18_24;
+            this.button4.Location = new System.Drawing.Point(74, 454);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(44, 23);
+            this.button4.TabIndex = 10;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RoboticParkingSystem.Properties.Resources.ikona;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 26);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 172);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = global::RoboticParkingSystem.Properties.Resources.homeorange;
+            this.button5.Location = new System.Drawing.Point(636, 14);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(35, 35);
+            this.button5.TabIndex = 0;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,12 +329,13 @@
             this.Text = "Form7";
             this.Load += new System.EventHandler(this.Form7_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.uplata.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,5 +362,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button5;
     }
 }
