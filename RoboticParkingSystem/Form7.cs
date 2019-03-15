@@ -101,7 +101,44 @@ namespace RoboticParkingSystem
 
         private void Form7_Load(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable("Alarmi");
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
+            {
+                if (cn.State == ConnectionState.Closed)
+                {
+                    cn.Open();
+                }
+                //nesto ne valja sa ovom naredbom
+                string sqlNaredba = "select TekstAlarma as 'Tekst alarma',VrijemeAlarma as 'Vrijeme alarma', Prioritet,Obradjen from Alarmi order by Prioritet ASC";
 
+
+
+                using (SqlDataAdapter da = new SqlDataAdapter(sqlNaredba, cn))
+                {
+
+                    da.Fill(dt);
+                    dataGridView2.DataSource = dt;
+
+                }
+            }
+            label5.ForeColor = tamnoZelena;
+            label6.ForeColor = tamnoZelena;
+            label7.ForeColor = tamnoZelena;
+            label8.ForeColor = svijetloZelena;
+            dataGridView2.Columns[0].Width = 220;
+            dataGridView2.Columns[1].Width = 210;
+            dataGridView2.Columns[2].Width = 93;
+            dataGridView2.Columns[3].Width = 84;
+
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                if (Convert.ToInt32(row.Cells[2].Value) == 1)
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 166, 166);
+                else if (Convert.ToInt32(row.Cells[2].Value) == 2)
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 206, 157);
+                else
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 125);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -139,6 +176,159 @@ namespace RoboticParkingSystem
         {
             new Form1().Show();
             this.Hide();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable("Alarmi");
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
+            {
+                if (cn.State == ConnectionState.Closed)
+                {
+                    cn.Open();
+                }
+                //nesto ne valja sa ovom naredbom
+                string sqlNaredba = "select TekstAlarma as 'Tekst alarma',VrijemeAlarma as 'Vrijeme alarma', Prioritet,Obradjen from Alarmi order by Prioritet ASC";
+
+
+
+                using (SqlDataAdapter da = new SqlDataAdapter(sqlNaredba, cn))
+                {
+
+                    da.Fill(dt);
+                    dataGridView2.DataSource = dt;
+
+                }
+            }
+            label5.ForeColor = tamnoZelena;
+            label6.ForeColor = tamnoZelena;
+            label7.ForeColor = tamnoZelena;
+            label8.ForeColor = svijetloZelena;
+            dataGridView2.Columns[0].Width = 220;
+            dataGridView2.Columns[1].Width = 210;
+            dataGridView2.Columns[2].Width = 93;
+            dataGridView2.Columns[3].Width = 84;
+
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                if (Convert.ToInt32(row.Cells[2].Value) == 1)
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 166, 166);
+                else if (Convert.ToInt32(row.Cells[2].Value) == 2)
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 206, 157);
+                else
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 125);
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable("Alarmi");
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
+            {
+                if (cn.State == ConnectionState.Closed)
+                {
+                    cn.Open();
+                }
+                //nesto ne valja sa ovom naredbom
+                string sqlNaredba = "select TekstAlarma as 'Tekst alarma',VrijemeAlarma as 'Vrijeme alarma',Obradjen from Alarmi ";
+                string sqlNaredba2 = "where Prioritet = 1;";
+
+                using (SqlDataAdapter da = new SqlDataAdapter(sqlNaredba + sqlNaredba2, cn))
+                {
+
+                    da.Fill(dt);
+                    dataGridView2.DataSource = dt;
+
+                }
+            }
+            dataGridView2.Columns[0].Width = 266;
+            dataGridView2.Columns[1].Width = 256;
+            dataGridView2.Columns[2].Width = 84;
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                row.DefaultCellStyle.BackColor = Color.FromArgb(255, 166, 166);
+            }
+            label5.ForeColor = svijetloZelena;
+            label6.ForeColor = tamnoZelena;
+            label7.ForeColor = tamnoZelena;
+            label8.ForeColor = tamnoZelena;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable("Alarmi");
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
+            {
+                if (cn.State == ConnectionState.Closed)
+                {
+                    cn.Open();
+                }
+                //nesto ne valja sa ovom naredbom
+                string sqlNaredba = "select TekstAlarma as 'Tekst alarma',VrijemeAlarma as 'Vrijeme alarma',Obradjen from Alarmi ";
+                string sqlNaredba2 = "where Prioritet = 2;";
+
+                using (SqlDataAdapter da = new SqlDataAdapter(sqlNaredba + sqlNaredba2, cn))
+                {
+
+                    da.Fill(dt);
+                    dataGridView2.DataSource = dt;
+
+                }
+            }
+            label5.ForeColor = tamnoZelena;
+            label6.ForeColor = svijetloZelena;
+            label7.ForeColor = tamnoZelena;
+            label8.ForeColor = tamnoZelena;
+            dataGridView2.Columns[0].Width = 266;
+            dataGridView2.Columns[1].Width = 256;
+            dataGridView2.Columns[2].Width = 84;
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                row.DefaultCellStyle.BackColor = Color.FromArgb(255, 206, 157);
+            }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable("Alarmi");
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
+            {
+                if (cn.State == ConnectionState.Closed)
+                {
+                    cn.Open();
+                }
+                //nesto ne valja sa ovom naredbom
+                string sqlNaredba = "select TekstAlarma as 'Tekst alarma',VrijemeAlarma as 'Vrijeme alarma',Obradjen from Alarmi ";
+                string sqlNaredba2 = "where Prioritet = 3;";
+
+                using (SqlDataAdapter da = new SqlDataAdapter(sqlNaredba + sqlNaredba2, cn))
+                {
+
+                    da.Fill(dt);
+                    dataGridView2.DataSource = dt;
+
+                }
+            }
+
+
+            label5.ForeColor = tamnoZelena;
+            label6.ForeColor = tamnoZelena;
+            label7.ForeColor = svijetloZelena;
+            label8.ForeColor = tamnoZelena;
+            dataGridView2.Columns[0].Width = 266;
+            dataGridView2.Columns[1].Width = 256;
+
+            dataGridView2.Columns[2].Width = 84;
+
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 125);
+            }
+        }
+
+        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
+        {
+            dataGridView2.ClearSelection();
         }
     }
 }
