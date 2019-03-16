@@ -342,7 +342,7 @@
             this.MaximizeBox = false;
             this.Name = "Form9";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form9";
+            this.Text = "Potvrda uplate";
             this.Load += new System.EventHandler(this.Form9_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
