@@ -330,5 +330,20 @@ namespace RoboticParkingSystem
         {
             dataGridView2.ClearSelection();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dataGridView2.Width, this.dataGridView2.Height);
+            if (panel4.Visible == true)
+                this.dataGridView2.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridView2.Width, this.dataGridView2.Height));
+            
+
+            e.Graphics.DrawImage(bm, 0, 0);
+        }
     }
 }
