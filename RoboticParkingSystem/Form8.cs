@@ -34,6 +34,15 @@ namespace RoboticParkingSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Image img = pictureBox1.Image;
+            byte[] arr;
+            ImageConverter converter = new ImageConverter();
+            arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+            string sqlCommand = "INSERT INTO Klijenti VALUES('" + Form5.ime1 + "','" + Form5.prezime1 + "', '" + Form5.adresa1 + "', '" + Form5.tablice1 + "', '" + Form5.vozacka1 + "', '" + arr + "');";
+            Program.izvrsiSql(sqlCommand);
+
+
+            Klijenti_lista.data.Add(new Client(Form5.ime1, Form5.prezime1, Form5.adresa1, pictureBox1.Image, Form5.tablice1, Form5.vozacka1));
             DialogResult result = MessageBox.Show("Korisnik uspješno dodan!", "Akcija uspješna", MessageBoxButtons.OK, MessageBoxIcon.Information);
             new Form7().Show();
             this.Hide();
