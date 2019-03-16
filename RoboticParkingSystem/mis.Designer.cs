@@ -41,6 +41,7 @@ namespace RoboticParkingSystem
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.signalizacija = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lijevopanel = new System.Windows.Forms.Panel();
             this.desnopanel = new System.Windows.Forms.Panel();
@@ -57,16 +58,15 @@ namespace RoboticParkingSystem
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.moveObj1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.signalizacija.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.nazadpanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moveObj1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -91,7 +91,7 @@ namespace RoboticParkingSystem
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(204, 27);
+            this.textBox1.Size = new System.Drawing.Size(204, 32);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Uspješno ste parkirali!";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -128,7 +128,7 @@ namespace RoboticParkingSystem
             this.zid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.zid.Location = new System.Drawing.Point(5, 170);
             this.zid.Name = "zid";
-            this.zid.Size = new System.Drawing.Size(204, 27);
+            this.zid.Size = new System.Drawing.Size(204, 32);
             this.zid.TabIndex = 0;
             this.zid.Text = "Udarili ste u zid!";
             this.zid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -153,7 +153,7 @@ namespace RoboticParkingSystem
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(8, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 50);
+            this.label1.Size = new System.Drawing.Size(235, 62);
             this.label1.TabIndex = 3;
             this.label1.Text = "Status parkiranja\r\nautomobila:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -174,6 +174,17 @@ namespace RoboticParkingSystem
             this.signalizacija.Name = "signalizacija";
             this.signalizacija.Size = new System.Drawing.Size(251, 530);
             this.signalizacija.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox1.Image = global::RoboticParkingSystem.Properties.Resources.ikona;
+            this.pictureBox1.Location = new System.Drawing.Point(53, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(145, 170);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // timer1
             // 
@@ -220,7 +231,7 @@ namespace RoboticParkingSystem
             this.uuu.ForeColor = System.Drawing.SystemColors.Window;
             this.uuu.Location = new System.Drawing.Point(247, 20);
             this.uuu.Name = "uuu";
-            this.uuu.Size = new System.Drawing.Size(99, 26);
+            this.uuu.Size = new System.Drawing.Size(99, 30);
             this.uuu.TabIndex = 0;
             this.uuu.Text = "Naprijed";
             this.uuu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -255,7 +266,7 @@ namespace RoboticParkingSystem
             this.lijevo.ForeColor = System.Drawing.SystemColors.Window;
             this.lijevo.Location = new System.Drawing.Point(22, 249);
             this.lijevo.Name = "lijevo";
-            this.lijevo.Size = new System.Drawing.Size(99, 26);
+            this.lijevo.Size = new System.Drawing.Size(99, 30);
             this.lijevo.TabIndex = 5;
             this.lijevo.Text = "Lijevo";
             this.lijevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -266,7 +277,7 @@ namespace RoboticParkingSystem
             this.desno.ForeColor = System.Drawing.SystemColors.Window;
             this.desno.Location = new System.Drawing.Point(462, 249);
             this.desno.Name = "desno";
-            this.desno.Size = new System.Drawing.Size(99, 26);
+            this.desno.Size = new System.Drawing.Size(99, 30);
             this.desno.TabIndex = 4;
             this.desno.Text = "Desno";
             this.desno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -278,7 +289,7 @@ namespace RoboticParkingSystem
             this.nazad.ForeColor = System.Drawing.SystemColors.Window;
             this.nazad.Location = new System.Drawing.Point(247, 454);
             this.nazad.Name = "nazad";
-            this.nazad.Size = new System.Drawing.Size(99, 26);
+            this.nazad.Size = new System.Drawing.Size(99, 30);
             this.nazad.TabIndex = 7;
             this.nazad.Text = "Nazad";
             this.nazad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -313,7 +324,7 @@ namespace RoboticParkingSystem
             this.textBox4.ForeColor = System.Drawing.Color.Ivory;
             this.textBox4.Location = new System.Drawing.Point(119, 426);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(343, 32);
+            this.textBox4.Size = new System.Drawing.Size(343, 38);
             this.textBox4.TabIndex = 14;
             this.textBox4.Text = "Možete napustiti automobil !";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -355,20 +366,9 @@ namespace RoboticParkingSystem
             this.moveObj1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveObj1_MouseMove);
             this.moveObj1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.moveObj1_MouseUp);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox1.Image = global::RoboticParkingSystem.Properties.Resources.ikona;
-            this.pictureBox1.Location = new System.Drawing.Point(53, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 170);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // mis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 529);
             this.Controls.Add(this.panel2);
@@ -378,12 +378,13 @@ namespace RoboticParkingSystem
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "mis";
-            this.Text = "mis";
+            this.Text = "Parkiranje";
             this.Load += new System.EventHandler(this.mis_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.mis_Paint);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.signalizacija.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.nazadpanel.ResumeLayout(false);
             this.nazadpanel.PerformLayout();
@@ -392,7 +393,6 @@ namespace RoboticParkingSystem
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moveObj1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
