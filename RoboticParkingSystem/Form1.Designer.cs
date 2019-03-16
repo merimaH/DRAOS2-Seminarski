@@ -50,10 +50,10 @@
             // nametxt
             // 
             this.nametxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nametxt.Location = new System.Drawing.Point(324, 160);
-            this.nametxt.Margin = new System.Windows.Forms.Padding(2);
+            this.nametxt.Location = new System.Drawing.Point(432, 197);
+            this.nametxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nametxt.Name = "nametxt";
-            this.nametxt.Size = new System.Drawing.Size(203, 26);
+            this.nametxt.Size = new System.Drawing.Size(269, 30);
             this.nametxt.TabIndex = 3;
             this.nametxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -61,10 +61,10 @@
             // 
             this.lozinkatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lozinkatxt.Location = new System.Drawing.Point(0, 1);
-            this.lozinkatxt.Margin = new System.Windows.Forms.Padding(2);
+            this.lozinkatxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lozinkatxt.Name = "lozinkatxt";
             this.lozinkatxt.PasswordChar = '*';
-            this.lozinkatxt.Size = new System.Drawing.Size(201, 26);
+            this.lozinkatxt.Size = new System.Drawing.Size(267, 30);
             this.lozinkatxt.TabIndex = 4;
             this.lozinkatxt.TextChanged += new System.EventHandler(this.lozinkatxt_TextChanged);
             this.lozinkatxt.Enter += new System.EventHandler(this.lozinkatxt_Enter);
@@ -75,18 +75,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(321, 145);
+            this.label1.Location = new System.Drawing.Point(428, 178);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(103, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Korisničko ime:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(321, 195);
+            this.label2.Location = new System.Drawing.Point(428, 240);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 7;
             this.label2.Text = "Šifra:";
             // 
@@ -99,18 +101,20 @@
             // 
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lozinkatxt);
-            this.panel1.Location = new System.Drawing.Point(324, 211);
+            this.panel1.Location = new System.Drawing.Point(432, 260);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 28);
+            this.panel1.Size = new System.Drawing.Size(323, 34);
             this.panel1.TabIndex = 10;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox3.Image = global::RoboticParkingSystem.Properties.Resources.index1;
-            this.pictureBox3.Location = new System.Drawing.Point(174, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(232, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.Size = new System.Drawing.Size(32, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -120,9 +124,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::RoboticParkingSystem.Properties.Resources.ikona_login;
-            this.pictureBox2.Location = new System.Drawing.Point(385, 45);
+            this.pictureBox2.Location = new System.Drawing.Point(513, 55);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 60);
+            this.pictureBox2.Size = new System.Drawing.Size(93, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -132,9 +137,10 @@
             // 
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.pictureBox1.Image = global::RoboticParkingSystem.Properties.Resources.ikona;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 69);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 85);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 233);
+            this.pictureBox1.Size = new System.Drawing.Size(241, 287);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -144,9 +150,10 @@
             this.login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(126)))), ((int)(((byte)(176)))));
             this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.login.Location = new System.Drawing.Point(457, 274);
+            this.login.Location = new System.Drawing.Point(609, 337);
+            this.login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(88, 28);
+            this.login.Size = new System.Drawing.Size(117, 34);
             this.login.TabIndex = 11;
             this.login.Text = "Prijava";
             this.login.UseVisualStyleBackColor = false;
@@ -159,10 +166,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(619, 361);
+            this.ClientSize = new System.Drawing.Size(825, 444);
             this.Controls.Add(this.login);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -170,8 +177,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nametxt);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

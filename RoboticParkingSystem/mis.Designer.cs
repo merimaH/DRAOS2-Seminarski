@@ -376,8 +376,11 @@ namespace RoboticParkingSystem
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "mis";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Parkiranje";
             this.Load += new System.EventHandler(this.mis_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.mis_Paint);

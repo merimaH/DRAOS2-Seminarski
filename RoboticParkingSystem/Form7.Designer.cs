@@ -358,8 +358,11 @@
             this.ClientSize = new System.Drawing.Size(1311, 667);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Form7";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supervizor";
             this.Load += new System.EventHandler(this.Form7_Load);
             this.panel1.ResumeLayout(false);
