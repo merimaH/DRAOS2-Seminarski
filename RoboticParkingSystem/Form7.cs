@@ -25,6 +25,8 @@ namespace RoboticParkingSystem
 
         private void Form6_Load(object sender, EventArgs e)
         {
+            button7.BackColor = SystemColors.Control;
+            button7.ForeColor = SystemColors.ControlText;
 
             DataTable dt = new DataTable("Alarmi");
             using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
@@ -44,6 +46,9 @@ namespace RoboticParkingSystem
 
                 }
             }
+            button7.BackColor = SystemColors.Control;
+            button7.ForeColor = SystemColors.ControlText;
+            button7.Font = new Font("MS Sans Serif", 13);
             // podesavanje sirine pojedinih kolona
             dataGridView2.Columns[0].Width = 220;
             dataGridView2.Columns[1].Width = 210;
@@ -80,11 +85,17 @@ namespace RoboticParkingSystem
             panel4.Visible = false;
             button3.BackColor = Color.FromArgb(72, 126, 176);
             button4.BackColor= Color.FromArgb(72, 126, 176);
+            button7.BackColor = Color.FromArgb(72, 126, 176);
+            button8.BackColor = Color.FromArgb(72, 126, 176);
 
             button3.ForeColor = SystemColors.ControlLightLight;
+            button7.ForeColor = SystemColors.ControlLightLight;
+            button8.ForeColor = SystemColors.ControlLightLight;
 
             button2.Font = new Font("MS Sans Serif", 13);
             button3.Font = new Font("MS Sans Serif", 12);
+            button7.Font = new Font("MS Sans Serif", 12);
+            button8.Font = new Font("MS Sans Serif", 12);
             panel1.BackColor= Color.FromArgb(72, 126, 176);
             button1.BackColor = Color.FromArgb(72, 126, 176);
             uplata.Visible = false;
@@ -149,9 +160,15 @@ namespace RoboticParkingSystem
             button2.BackColor = Color.FromArgb(255, 159, 67);
             button4.BackColor = Color.FromArgb(255, 159, 67);
             button2.ForeColor = SystemColors.ControlLightLight;
+            button7.BackColor = Color.FromArgb(255, 159, 67);
+            button7.ForeColor = SystemColors.ControlLightLight;
+            button8.BackColor = Color.FromArgb(255, 159, 67);
+            button8.ForeColor = SystemColors.ControlLightLight;
 
             button3.Font = new Font("MS Sans Serif", 13);
             button2.Font = new Font("MS Sans Serif", 12);
+            button7.Font = new Font("MS Sans Serif", 12);
+            button8.Font = new Font("MS Sans Serif", 12);
             panel1.BackColor = Color.FromArgb(255, 159, 67);
             button1.BackColor = Color.FromArgb(255, 159, 67);
             uplata.Visible = true;
@@ -344,6 +361,43 @@ namespace RoboticParkingSystem
             
 
             e.Graphics.DrawImage(bm, 0, 0);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+           
+
+            button2.BackColor = Color.FromArgb(16, 172, 132);
+            button2.ForeColor = SystemColors.ControlLightLight;
+
+            button7.BackColor = SystemColors.Control;
+            button7.ForeColor = SystemColors.ControlText;
+
+            button3.BackColor = Color.FromArgb(16, 172, 132);
+            button3.ForeColor = SystemColors.ControlLightLight;
+            button8.BackColor = Color.FromArgb(16, 172, 132);
+            button8.ForeColor = SystemColors.ControlLightLight;
+
+            button4.BackColor = Color.FromArgb(16, 172, 132);
+            button1.BackColor = Color.FromArgb(16, 172, 132);
+            panel1.BackColor = Color.FromArgb(16, 172, 132);
+
+            button7.Font = new Font("MS Sans Serif", 13);
+            button2.Font = new Font("MS Sans Serif", 12);
+            button3.Font = new Font("MS Sans Serif", 12);
+            button8.Font = new Font("MS Sans Serif", 12);
+
+            uplata.Visible = false;
+            unos.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            panel4.Visible = false;
+            panel4.Visible = true;
         }
     }
 }
