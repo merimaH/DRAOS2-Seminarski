@@ -14,6 +14,14 @@ namespace RoboticParkingSystem
 {
     public partial class FormDodajUplatu : Form
     {
+        public static string ime1 = "";
+        public static string prezime1 = "";
+        public static string vozacka1 = "";
+        public static string tablice1 = "";
+        public static string adresa1 = "";
+        public static DateTime datum1=new DateTime(2004, 1, 1);
+        public static string mjeseci1 = "";
+        public static int id1 = 0;
         public FormDodajUplatu()
         {
             InitializeComponent();
@@ -115,25 +123,45 @@ namespace RoboticParkingSystem
                 int id = int.Parse(red.Cells[0].Value.ToString());
                 Program.brojacUplata += 1;
                 int brojMjeseci = 1;
+                mjeseci1 = brojMjeseci.ToString();
                 if (checkBox1.Checked == true)
-                    brojMjeseci = Convert.ToInt32(numericUpDown1.Value);
-                string sqlFormattedDate = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss.fff");
-                string sqlNaredba = string.Format("INSERT INTO Uplate VALUES ({0}, '{1}',{2});",  brojMjeseci, sqlFormattedDate, id);
-                using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
                 {
-                    if (cn.State == ConnectionState.Closed)
-                    {
-                        cn.Open();
-                    }
-                    SqlCommand sqlCommand = new SqlCommand(sqlNaredba, cn);
+                    brojMjeseci = Convert.ToInt32(numericUpDown1.Value);
+                    mjeseci1 = brojMjeseci.ToString();
+                }
+                //ime1=Klijenti_lista.data.SequenceEqual<id>.ToString();
+                ime1 = dataGridView1.Rows[id-1].Cells[1].Value.ToString();
+                prezime1 = dataGridView1.Rows[id-1].Cells[2].Value.ToString();
+                adresa1 = dataGridView1.Rows[id - 1].Cells[3].Value.ToString();
+                tablice1 = dataGridView1.Rows[id - 1].Cells[4].Value.ToString();
+                vozacka1 = dataGridView1.Rows[id - 1].Cells[5].Value.ToString();
+                id1= int.Parse(dataGridView1.Rows[id - 1].Cells[0].Value.ToString());
+                //ime1 = dataGridView1.Rows[id - 1].Cells[1].Value.ToString();
+                datum1 = dateTimePicker1.Value;
+                string sqlFormattedDate = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                //datum1 = DateTime.Parse(sqlFormattedDate);
+                //string sqlNaredba = string.Format("INSERT INTO Uplate VALUES ({0}, '{1}',{2});",  brojMjeseci, sqlFormattedDate, id);
+                //using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
+                //{
+                    //if (cn.State == ConnectionState.Closed)
+                    //{
+                      //  cn.Open();
+                   // }
+                    //SqlCommand sqlCommand = new SqlCommand(sqlNaredba, cn);
                     //sqlCommand.BeginExecuteNonQuery();
-                    sqlCommand.ExecuteNonQuery();
+                    //sqlCommand.ExecuteNonQuery();
 
                     //SqlDataAdapter da = new SqlDataAdapter(sqlNaredba, cn);
                     
-                }
+                //}
             }
-            new prikazUplata().Show();
+            //new prikazUplata().Show();
+            new Form9().Show();
+            this.Hide();
+            //Form7.Close();
+            var first = Application.OpenForms.OfType<Form7>().FirstOrDefault();
+            if (first != null)
+                first.Hide();
             //textBox1.Text = id.ToString();
 
 
