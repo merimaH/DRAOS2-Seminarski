@@ -55,6 +55,13 @@ namespace RoboticParkingSystem
             dataGridView2.Columns[2].Width = 93;
             dataGridView2.Columns[3].Width = 84;
 
+            toolTip2.SetToolTip(button6, "Printanje PDF dokumenta izvještaja alarma.");
+            toolTip2.SetToolTip(label8, "Prikaz svih alarma.");
+            toolTip2.SetToolTip(label5, "Prikaz alarma s prioritetom 1");
+            toolTip2.SetToolTip(label6, "Prikaz alarma s prioritetom 2");
+            toolTip2.SetToolTip(label7, "Prikaz alarma s prioritetom 3");
+            toolTip2.SetToolTip(button4, "Pomoć");
+
             // podesavanje boje ovisno od prioriteta alarma
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {

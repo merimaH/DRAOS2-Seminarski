@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
@@ -55,6 +56,10 @@
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -123,6 +128,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(59, 28);
             this.button4.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.button4, "Pomoć");
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
@@ -240,6 +246,7 @@
             this.button6.Size = new System.Drawing.Size(157, 32);
             this.button6.TabIndex = 8;
             this.button6.Text = "Isprintaj izvještaj";
+            this.toolTip1.SetToolTip(this.button6, "Printanje PDF dokumenta izvještaja alarma.");
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -266,6 +273,7 @@
             this.label8.Size = new System.Drawing.Size(69, 17);
             this.label8.TabIndex = 6;
             this.label8.Text = "Svi alarmi";
+            this.toolTip1.SetToolTip(this.label8, "Prikaz svih alarma.");
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
@@ -278,6 +286,7 @@
             this.label7.Size = new System.Drawing.Size(81, 17);
             this.label7.TabIndex = 5;
             this.label7.Text = "Upozorenja\r\n";
+            this.toolTip1.SetToolTip(this.label7, "Prikaz alarma s prioritetom 3");
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
@@ -290,6 +299,7 @@
             this.label6.Size = new System.Drawing.Size(54, 17);
             this.label6.TabIndex = 4;
             this.label6.Text = "Greške";
+            this.toolTip1.SetToolTip(this.label6, "Prikaz alarma s prioritetom 2");
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
@@ -302,6 +312,7 @@
             this.label5.Size = new System.Drawing.Size(55, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "Kvarovi";
+            this.toolTip1.SetToolTip(this.label5, "Prikaz alarma s prioritetom 1");
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
@@ -386,6 +397,12 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -440,5 +457,9 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

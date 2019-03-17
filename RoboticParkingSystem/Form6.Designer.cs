@@ -560,9 +560,11 @@
             this.button7.Location = new System.Drawing.Point(732, 43);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
+            this.helpProvider1.SetShowHelp(this.button7, false);
             this.button7.Size = new System.Drawing.Size(157, 32);
             this.button7.TabIndex = 9;
             this.button7.Text = "Isprintaj izvještaj";
+            this.toolTip1.SetToolTip(this.button7, "Printanje PDF dokumenta izvještaja alarma.");
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
