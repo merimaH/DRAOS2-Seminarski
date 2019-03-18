@@ -16,5 +16,11 @@ namespace RoboticParkingSystem
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Form7().Show();
+            this.Hide();
+        }
     }
 }

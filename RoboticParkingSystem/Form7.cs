@@ -94,6 +94,7 @@ namespace RoboticParkingSystem
             button4.BackColor= Color.FromArgb(72, 126, 176);
             button7.BackColor = Color.FromArgb(72, 126, 176);
             button8.BackColor = Color.FromArgb(72, 126, 176);
+            
 
             button3.ForeColor = SystemColors.ControlLightLight;
             button7.ForeColor = SystemColors.ControlLightLight;
@@ -178,6 +179,7 @@ namespace RoboticParkingSystem
             button8.Font = new Font("MS Sans Serif", 12);
             panel1.BackColor = Color.FromArgb(255, 159, 67);
             button1.BackColor = Color.FromArgb(255, 159, 67);
+           
             uplata.Visible = true;
             unos.Visible = false;
             label1.Visible = false;
@@ -384,6 +386,7 @@ namespace RoboticParkingSystem
 
             button7.BackColor = SystemColors.Control;
             button7.ForeColor = SystemColors.ControlText;
+            
 
             button3.BackColor = Color.FromArgb(16, 172, 132);
             button3.ForeColor = SystemColors.ControlLightLight;
@@ -405,6 +408,12 @@ namespace RoboticParkingSystem
             label2.Visible = false;
             panel4.Visible = false;
             panel4.Visible = true;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new Form10().Show();
+            this.Hide();
         }
     }
 }

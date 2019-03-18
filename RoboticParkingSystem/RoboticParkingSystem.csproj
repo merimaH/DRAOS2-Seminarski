@@ -210,6 +210,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +345,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database2.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\garaza11.png" />
+    <None Include="Resources\garaza2.png" />
+    <None Include="Resources\garaza1.png" />
+    <None Include="Resources\garaza.png" />
     <None Include="Resources\warning.png" />
     <None Include="Resources\homeorange.png" />
     <None Include="Resources\homeblue.png" />
