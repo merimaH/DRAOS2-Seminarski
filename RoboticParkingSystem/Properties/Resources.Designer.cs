@@ -183,9 +183,29 @@ namespace RoboticParkingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap garaza12 {
+            get {
+                object obj = ResourceManager.GetObject("garaza12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap garaza2 {
             get {
                 object obj = ResourceManager.GetObject("garaza2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap garaza3 {
+            get {
+                object obj = ResourceManager.GetObject("garaza3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -345,6 +345,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database2.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\garaza12.png" />
+    <None Include="Resources\garaza3.png" />
     <None Include="Resources\garaza11.png" />
     <None Include="Resources\garaza2.png" />
     <None Include="Resources\garaza1.png" />
