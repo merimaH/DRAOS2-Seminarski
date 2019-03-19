@@ -123,6 +123,8 @@ namespace RoboticParkingSystem
 
         private void Form7_Load(object sender, EventArgs e)
         {
+            button7.BackColor = SystemColors.Control;
+            button7.ForeColor = SystemColors.ControlText;
             DataTable dt = new DataTable("Alarmi");
             using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
             {
