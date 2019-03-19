@@ -107,9 +107,11 @@ namespace RoboticParkingSystem
             panel1.BackColor= Color.FromArgb(72, 126, 176);
             button1.BackColor = Color.FromArgb(72, 126, 176);
             uplata.Visible = false;
+            panel5.Visible = false;
             unos.Visible = true;
             label2.Visible = false;
             label1.Visible = true;
+            tableLayoutPanel1.Visible = false;
             //Form5.DefaultBackColor.= Color.FromArgb(72, 126, 176);
             unos.Controls.Clear();
             Form5 novaforma = new Form5();
@@ -181,10 +183,12 @@ namespace RoboticParkingSystem
             button1.BackColor = Color.FromArgb(255, 159, 67);
            
             uplata.Visible = true;
+            panel5.Visible = false;
             unos.Visible = false;
             label1.Visible = false;
             label2.Visible = true;
             panel4.Visible = false;
+            tableLayoutPanel1.Visible = false;
             //Form5.DefaultBackColor.= Color.FromArgb(72, 126, 176);
             uplata.Controls.Clear();
             FormDodajUplatu novaforma1 = new FormDodajUplatu();
@@ -403,17 +407,55 @@ namespace RoboticParkingSystem
             button8.Font = new Font("MS Sans Serif", 12);
 
             uplata.Visible = false;
+            panel5.Visible = false;
             unos.Visible = false;
             label1.Visible = false;
             label2.Visible = false;
             panel4.Visible = false;
             panel4.Visible = true;
+            tableLayoutPanel1.Visible = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            new Form10().Show();
-            this.Hide();
+            //new Form10().Show();
+            //this.Hide();
+            button2.BackColor = Color.FromArgb(255, 107, 107);
+            button2.ForeColor = SystemColors.ControlLightLight;
+
+            button8.BackColor = SystemColors.Control;
+            button8.ForeColor = SystemColors.ControlText;
+
+
+            button3.BackColor = Color.FromArgb(255, 107, 107);
+            button3.ForeColor = SystemColors.ControlLightLight;
+            button7.BackColor = Color.FromArgb(255, 107, 107);
+            button7.ForeColor = SystemColors.ControlLightLight;
+
+            button4.BackColor = Color.FromArgb(255, 107, 107);
+            button1.BackColor = Color.FromArgb(255, 107, 107);
+            panel1.BackColor = Color.FromArgb(255, 107, 107);
+
+            button7.Font = new Font("MS Sans Serif", 12);
+            button2.Font = new Font("MS Sans Serif", 12);
+            button3.Font = new Font("MS Sans Serif", 12);
+            button8.Font = new Font("MS Sans Serif", 12);
+
+
+            uplata.Visible = false;
+            unos.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            panel4.Visible = false;
+            //panel4.Visible = true;
+            panel5.Visible = true;
+            tableLayoutPanel1.Visible = true;
+
+            //panel5.Controls.Clear();
+            //Form10 novaforma12 = new Form10();
+            //novaforma12.TopLevel = false;
+            //panel5.Controls.Add(novaforma12);
+            //novaforma12.Show();
         }
     }
 }
