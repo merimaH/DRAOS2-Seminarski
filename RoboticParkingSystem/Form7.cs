@@ -20,6 +20,7 @@ namespace RoboticParkingSystem
         private System.Drawing.Printing.PrintDocument document = new System.Drawing.Printing.PrintDocument();
         public Form7()
         {
+           
             InitializeComponent();
         }
 
