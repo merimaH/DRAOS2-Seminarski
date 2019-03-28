@@ -453,6 +453,25 @@ namespace RoboticParkingSystem
             //panel4.Visible = true;
             panel5.Visible = true;
             tableLayoutPanel1.Visible = true;
+            TableLayoutControlCollection tableControls = tableLayoutPanel1.Controls;
+            
+            foreach ( Control kontrola in tableControls)
+            {
+                if (kontrola.GetType() == pictureBox2.GetType())
+                {
+                    PictureBox pbKontrola = kontrola as PictureBox;
+                    Console.WriteLine(pbKontrola.Image.ToString());
+                    if (kontrola.Name[kontrola.Name.Length-1]=='a')
+                    {
+                        toolTip1.SetToolTip(kontrola, "A12-A-123");
+                    }
+                    else
+                    {
+                        toolTip1.SetToolTip(kontrola, "Slobodno mjesto");
+                    }
+                }
+            }
+           
 
             //panel5.Controls.Clear();
             //Form10 novaforma12 = new Form10();

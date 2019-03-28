@@ -92,15 +92,24 @@ namespace RoboticParkingSystem
                 errorProvider1.SetError(textBox4, "");
 
             //validacija da registracija mora biti 9 znakova
-            if (registracija.Length != 9 || (Regex.Matches(registracija, @"[AEJKMOT][1-9]{2}-[AEJKMOT]-[1-9]{3}").Count != 1 &&
-                    Regex.Matches(registracija, @"TA-[1-9]{6}").Count != 1))
+            if ((registracija.Length != 9 && registracija.Length != 7) || (Regex.Matches(registracija, @"[AEJKMOT][1-9]{2}-?[AEJKMOT]-?[1-9]{3}", RegexOptions.IgnoreCase).Count != 1 &&
+                    Regex.Matches(registracija, @"TA-?[1-9]{6}", RegexOptions.IgnoreCase).Count != 1))
             {
                 errorProvider1.SetError(textBox3, "Pogrešna registarska oznaka");
                 textBox3.Select();
                 flag_validno = false;
             }
             else
+            {
                 errorProvider1.SetError(textBox3, "");
+                registracija = registracija.ToUpper();
+                if (registracija.Length == 7)
+                {
+                    registracija = registracija.Insert(3, "-");
+                    registracija = registracija.Insert(5, "-");
+                    
+                }
+            }
 
             if (vozacka.Length == 0)
             {
