@@ -51,14 +51,20 @@ namespace RoboticParkingSystem
             panel1.Visible = true;
             panel3.Visible = false;
             panel4.Visible = false;
-            DataGridViewRow row1 = dataGridView1.Rows[0];
-            DataGridViewRow row2 = dataGridView1.Rows[1];
-            row1.DefaultCellStyle.BackColor = Color.FromArgb(198, 216, 232);
-            row2.DefaultCellStyle.BackColor = Color.FromArgb(198, 216, 232);
-            pictureBox2.Visible = true;
-            pictureBox3.Visible = true;
+            if (dataGridView1.Rows.Count>2)
+            {
+                DataGridViewRow row1 = dataGridView1.Rows[0];
+                DataGridViewRow row2 = dataGridView1.Rows[1];
+                row1.DefaultCellStyle.BackColor = Color.FromArgb(198, 216, 232);
+                row2.DefaultCellStyle.BackColor = Color.FromArgb(198, 216, 232);
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = true;
+            }
+            /**/
+            
             label2.ForeColor = Color.FromArgb(72, 126, 176);
             label3.ForeColor = Color.FromArgb(32, 56, 79);
+            label10.ForeColor = Color.FromArgb(32, 56, 79);
 
 
             toolTip1.SetToolTip(label2, "Prikaz korisnika sa važećom uplatom.");
@@ -72,6 +78,8 @@ namespace RoboticParkingSystem
             toolTip1.SetToolTip(label6, "Prikaz alarma s prioritetom 2");
             toolTip1.SetToolTip(label7, "Prikaz alarma s prioritetom 3");
             toolTip1.SetToolTip(button8, "Pomoć");
+            toolTip1.SetToolTip(label10, "Dodatna pretraga");
+            toolTip1.SetToolTip(dateTimePicker1, "Odaberite početni i krajnji datum uplate");
             
 
 
@@ -193,6 +201,24 @@ namespace RoboticParkingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable("Klijenti");
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
+            {
+                if (cn.State == ConnectionState.Closed)
+                {
+                    cn.Open();
+                }
+                //nesto ne valja sa ovom naredbom
+                string sqlNaredba = "select Klijenti.Ime,Klijenti.Prezime,Klijenti.Adresa,Klijenti.Registracija,Klijenti.Vozacka,datefromparts(year(Uplate.DatumUplate),month(Uplate.DatumUplate)+Uplate.BrojMjeseci,day(Uplate.DatumUplate)) as 'Uplata vazi do' from Klijenti inner join Uplate on Uplate.ClientID = Klijenti.ClientID ";
+                string sqlNaredba2 = "where datefromparts(year(Uplate.DatumUplate),month(Uplate.DatumUplate)+Uplate.BrojMjeseci,day(Uplate.DatumUplate)) >= GETDATE();";
+                using (SqlDataAdapter da = new SqlDataAdapter(sqlNaredba + sqlNaredba2, cn))
+                {
+
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+
+                }
+            }
             button2.BackColor = Color.FromArgb(72, 126, 176);
             button2.ForeColor = SystemColors.ControlLightLight;
 
@@ -207,10 +233,16 @@ namespace RoboticParkingSystem
             button3.Font = new Font("MS Sans Serif", 12);
 
             panel1.Visible = true;
-            DataGridViewRow row1 = dataGridView1.Rows[0];
-            DataGridViewRow row2 = dataGridView1.Rows[1];
-            row1.DefaultCellStyle.BackColor = Color.FromArgb(198, 216, 232);
-            row2.DefaultCellStyle.BackColor = Color.FromArgb(198, 216, 232);
+            if (dataGridView1.Rows.Count > 2)
+            {
+                DataGridViewRow row1 = dataGridView1.Rows[0];
+                DataGridViewRow row2 = dataGridView1.Rows[1];
+                row1.DefaultCellStyle.BackColor = Color.FromArgb(198, 216, 232);
+                row2.DefaultCellStyle.BackColor = Color.FromArgb(198, 216, 232);
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = true;
+            }
+            
 
             button4.BackColor = Color.FromArgb(72, 126, 176);
             splitter1.BackColor = Color.FromArgb(72, 126, 176);
@@ -240,6 +272,7 @@ namespace RoboticParkingSystem
         {
             label3.ForeColor = Color.FromArgb(72, 126, 176);
             label2.ForeColor = Color.FromArgb(32, 56, 79);
+            label10.ForeColor = Color.FromArgb(32, 56, 79);
             DataTable dt = new DataTable("Klijenti");
             using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
             {
@@ -260,6 +293,11 @@ namespace RoboticParkingSystem
             }
             pictureBox2.Visible = false;
             pictureBox3.Visible = false;
+            dateTimePicker1.Visible = false;
+            dateTimePicker2.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+            label13.Visible = false;
 
 
         }
@@ -268,6 +306,7 @@ namespace RoboticParkingSystem
         {
             label2.ForeColor = Color.FromArgb(72, 126, 176);
             label3.ForeColor = Color.FromArgb(32, 56, 79);
+            label10.ForeColor = Color.FromArgb(32, 56, 79);
             DataTable dt = new DataTable("Klijenti");
             using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
             {
@@ -286,6 +325,11 @@ namespace RoboticParkingSystem
 
                 }
             }
+            dateTimePicker1.Visible = false;
+            dateTimePicker2.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+            label13.Visible = false;
         }
 
         private void label2_Enter(object sender, EventArgs e)
@@ -556,6 +600,111 @@ namespace RoboticParkingSystem
         private void button8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            label10.ForeColor = Color.FromArgb(72, 126, 176);
+            label3.ForeColor = Color.FromArgb(32, 56, 79);
+            label2.ForeColor = Color.FromArgb(32, 56, 79);
+            dateTimePicker1.Visible = true;
+            dateTimePicker2.Visible = true;
+            label11.Visible = true;
+            label12.Visible = true;
+            label13.Visible = true;
+            if (dateTimePicker2.Value < dateTimePicker1.Value)
+            {
+                errorProvider1.SetError(dateTimePicker2, "Krajnji datum mora biti nakon početnog datuma.");
+            }
+            else
+            {
+                errorProvider1.SetError(dateTimePicker2, "");
+                DataTable dt = new DataTable("Klijenti");
+                string sqlStartDate = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                string sqlEndDate = dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
+                {
+                    if (cn.State == ConnectionState.Closed)
+                    {
+                        cn.Open();
+                    }
+                    //nesto ne valja sa ovom naredbom
+                    string sqlNaredba = "select Klijenti.Ime,Klijenti.Prezime,Klijenti.Adresa,Klijenti.Registracija,Klijenti.Vozacka,datefromparts(year(Uplate.DatumUplate),month(Uplate.DatumUplate)+Uplate.BrojMjeseci,day(Uplate.DatumUplate)) as 'Uplata vazi do' from Klijenti inner join Uplate on Uplate.ClientID = Klijenti.ClientID ";
+                    string sqlNaredba2 = "where Uplate.DatumUplate >= '" + sqlStartDate + "' and Uplate.DatumUplate< '" + sqlEndDate + "';";
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlNaredba + sqlNaredba2, cn))
+                    {
+
+                        da.Fill(dt);
+                        dataGridView1.DataSource = dt;
+
+                    }
+                }
+            }
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateTimePicker2.Value<dateTimePicker1.Value)
+            {
+                errorProvider1.SetError(dateTimePicker2, "Krajnji datum mora biti nakon početnog datuma.");
+            }
+            else
+            {
+                errorProvider1.SetError(dateTimePicker2, "");
+                DataTable dt = new DataTable("Klijenti");
+                string sqlStartDate = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                string sqlEndDate = dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
+                {
+                    if (cn.State == ConnectionState.Closed)
+                    {
+                        cn.Open();
+                    }
+                    //nesto ne valja sa ovom naredbom
+                    string sqlNaredba = "select Klijenti.Ime,Klijenti.Prezime,Klijenti.Adresa,Klijenti.Registracija,Klijenti.Vozacka,datefromparts(year(Uplate.DatumUplate),month(Uplate.DatumUplate)+Uplate.BrojMjeseci,day(Uplate.DatumUplate)) as 'Uplata vazi do' from Klijenti inner join Uplate on Uplate.ClientID = Klijenti.ClientID ";
+                    string sqlNaredba2 = "where Uplate.DatumUplate >= '"+sqlStartDate+"' and Uplate.DatumUplate< '"+sqlEndDate+"';";
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlNaredba + sqlNaredba2, cn))
+                    {
+
+                        da.Fill(dt);
+                        dataGridView1.DataSource = dt;
+
+                    }
+                }
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateTimePicker2.Value < dateTimePicker1.Value)
+            {
+                errorProvider1.SetError(dateTimePicker1, "Krajnji datum mora biti nakon početnog datuma.");
+            }
+            else
+            {
+                errorProvider1.SetError(dateTimePicker1, "");
+                DataTable dt = new DataTable("Klijenti");
+                string sqlStartDate = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                string sqlEndDate = dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["RoboticParkingSystem.Properties.Settings.Database2ConnectionString"].ConnectionString))
+                {
+                    if (cn.State == ConnectionState.Closed)
+                    {
+                        cn.Open();
+                    }
+                    //nesto ne valja sa ovom naredbom
+                    string sqlNaredba = "select Klijenti.Ime,Klijenti.Prezime,Klijenti.Adresa,Klijenti.Registracija,Klijenti.Vozacka,datefromparts(year(Uplate.DatumUplate),month(Uplate.DatumUplate)+Uplate.BrojMjeseci,day(Uplate.DatumUplate)) as 'Uplata vazi do' from Klijenti inner join Uplate on Uplate.ClientID = Klijenti.ClientID ";
+                    string sqlNaredba2 = "where Uplate.DatumUplate >= '" + sqlStartDate + "' and Uplate.DatumUplate< '" + sqlEndDate + "';";
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlNaredba + sqlNaredba2, cn))
+                    {
+
+                        da.Fill(dt);
+                        dataGridView1.DataSource = dt;
+
+                    }
+                }
+            }
         }
     }
 }

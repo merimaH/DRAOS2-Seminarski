@@ -51,10 +51,10 @@ namespace RoboticParkingSystem
             button7.ForeColor = SystemColors.ControlText;
             button7.Font = new Font("MS Sans Serif", 13);
             // podesavanje sirine pojedinih kolona
-            dataGridView2.Columns[0].Width = 220;
-            dataGridView2.Columns[1].Width = 210;
-            dataGridView2.Columns[2].Width = 93;
-            dataGridView2.Columns[3].Width = 84;
+            dataGridView2.Columns[0].Width = 240;
+            dataGridView2.Columns[1].Width = 230;
+            dataGridView2.Columns[2].Width = 113;
+            dataGridView2.Columns[3].Width = 104;
 
             toolTip2.SetToolTip(button6, "Printanje PDF dokumenta izvještaja alarma.");
             toolTip2.SetToolTip(label8, "Prikaz svih alarma.");
@@ -149,10 +149,10 @@ namespace RoboticParkingSystem
             label6.ForeColor = tamnoZelena;
             label7.ForeColor = tamnoZelena;
             label8.ForeColor = svijetloZelena;
-            dataGridView2.Columns[0].Width = 220;
-            dataGridView2.Columns[1].Width = 210;
-            dataGridView2.Columns[2].Width = 93;
-            dataGridView2.Columns[3].Width = 84;
+            dataGridView2.Columns[0].Width = 240;
+            dataGridView2.Columns[1].Width = 230;
+            dataGridView2.Columns[2].Width = 123;
+            dataGridView2.Columns[3].Width = 104;
 
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {
@@ -237,10 +237,10 @@ namespace RoboticParkingSystem
             label6.ForeColor = tamnoZelena;
             label7.ForeColor = tamnoZelena;
             label8.ForeColor = svijetloZelena;
-            dataGridView2.Columns[0].Width = 220;
-            dataGridView2.Columns[1].Width = 210;
-            dataGridView2.Columns[2].Width = 93;
-            dataGridView2.Columns[3].Width = 84;
+            dataGridView2.Columns[0].Width = 240;
+            dataGridView2.Columns[1].Width = 230;
+            dataGridView2.Columns[2].Width = 123;
+            dataGridView2.Columns[3].Width = 104;
 
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {
@@ -274,9 +274,9 @@ namespace RoboticParkingSystem
 
                 }
             }
-            dataGridView2.Columns[0].Width = 266;
-            dataGridView2.Columns[1].Width = 256;
-            dataGridView2.Columns[2].Width = 84;
+            dataGridView2.Columns[0].Width = 286;
+            dataGridView2.Columns[1].Width = 286;
+            dataGridView2.Columns[2].Width = 124;
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {
                 row.DefaultCellStyle.BackColor = Color.FromArgb(255, 166, 166);
@@ -312,9 +312,9 @@ namespace RoboticParkingSystem
             label6.ForeColor = svijetloZelena;
             label7.ForeColor = tamnoZelena;
             label8.ForeColor = tamnoZelena;
-            dataGridView2.Columns[0].Width = 266;
-            dataGridView2.Columns[1].Width = 256;
-            dataGridView2.Columns[2].Width = 84;
+            dataGridView2.Columns[0].Width = 286;
+            dataGridView2.Columns[1].Width = 286;
+            dataGridView2.Columns[2].Width = 124;
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {
                 row.DefaultCellStyle.BackColor = Color.FromArgb(255, 206, 157);
@@ -348,10 +348,9 @@ namespace RoboticParkingSystem
             label6.ForeColor = tamnoZelena;
             label7.ForeColor = svijetloZelena;
             label8.ForeColor = tamnoZelena;
-            dataGridView2.Columns[0].Width = 266;
-            dataGridView2.Columns[1].Width = 256;
-
-            dataGridView2.Columns[2].Width = 84;
+            dataGridView2.Columns[0].Width = 286;
+            dataGridView2.Columns[1].Width = 286;
+            dataGridView2.Columns[2].Width = 124;
 
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {

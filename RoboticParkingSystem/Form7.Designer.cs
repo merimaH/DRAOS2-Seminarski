@@ -63,7 +63,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox62a = new System.Windows.Forms.PictureBox();
-            this.pictureBox64a = new System.Windows.Forms.PictureBox();
+            this.pictureBox64 = new System.Windows.Forms.PictureBox();
             this.pictureBox54a = new System.Windows.Forms.PictureBox();
             this.pictureBox23a = new System.Windows.Forms.PictureBox();
             this.pictureBox711a = new System.Windows.Forms.PictureBox();
@@ -135,7 +135,7 @@
             this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox62a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox54a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox711a)).BeginInit();
@@ -336,7 +336,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.uplata);
             this.panel3.Controls.Add(this.label1);
@@ -356,7 +355,7 @@
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(4, 3);
+            this.panel4.Location = new System.Drawing.Point(182, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(800, 540);
             this.panel4.TabIndex = 9;
@@ -366,7 +365,7 @@
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(549, 35);
+            this.button6.Location = new System.Drawing.Point(667, 36);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(118, 26);
             this.button6.TabIndex = 8;
@@ -383,7 +382,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(33, 67);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(644, 355);
+            this.dataGridView2.Size = new System.Drawing.Size(752, 460);
             this.dataGridView2.TabIndex = 7;
             this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
             // 
@@ -453,7 +452,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
-            this.label2.Location = new System.Drawing.Point(56, 15);
+            this.label2.Location = new System.Drawing.Point(63, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 22);
@@ -526,7 +525,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.tableLayoutPanel1);
-            this.panel5.Location = new System.Drawing.Point(182, -1);
+            this.panel5.Location = new System.Drawing.Point(182, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(800, 542);
@@ -547,7 +546,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox62a, 5, 7);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox64a, 7, 7);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox64, 7, 7);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox54a, 6, 6);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox23a, 7, 2);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox711a, 7, 0);
@@ -639,17 +638,17 @@
             this.pictureBox62a.TabIndex = 135;
             this.pictureBox62a.TabStop = false;
             // 
-            // pictureBox64a
+            // pictureBox64
             // 
-            this.pictureBox64a.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox64a.Image = global::RoboticParkingSystem.Properties.Resources.garaza3;
-            this.pictureBox64a.Location = new System.Drawing.Point(636, 453);
-            this.pictureBox64a.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox64a.Name = "pictureBox64a";
-            this.pictureBox64a.Size = new System.Drawing.Size(42, 59);
-            this.pictureBox64a.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox64a.TabIndex = 134;
-            this.pictureBox64a.TabStop = false;
+            this.pictureBox64.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pictureBox64.Image = global::RoboticParkingSystem.Properties.Resources.garaza3;
+            this.pictureBox64.Location = new System.Drawing.Point(636, 453);
+            this.pictureBox64.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox64.Name = "pictureBox64";
+            this.pictureBox64.Size = new System.Drawing.Size(42, 59);
+            this.pictureBox64.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox64.TabIndex = 134;
+            this.pictureBox64.TabStop = false;
             // 
             // pictureBox54a
             // 
@@ -1399,8 +1398,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 542);
+            this.ClientSize = new System.Drawing.Size(984, 546);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1421,7 +1421,7 @@
             this.panel5.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox62a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox54a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox711a)).EndInit();
@@ -1523,7 +1523,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox62a;
-        private System.Windows.Forms.PictureBox pictureBox64a;
+        private System.Windows.Forms.PictureBox pictureBox64;
         private System.Windows.Forms.PictureBox pictureBox54a;
         private System.Windows.Forms.PictureBox pictureBox23a;
         private System.Windows.Forms.PictureBox pictureBox711a;
