@@ -478,5 +478,11 @@ namespace RoboticParkingSystem
             //panel5.Controls.Add(novaforma12);
             //novaforma12.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string filename = "Help.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
     }
 }

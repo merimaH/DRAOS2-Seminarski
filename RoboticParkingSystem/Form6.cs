@@ -599,7 +599,8 @@ namespace RoboticParkingSystem
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            string filename = "Help.pdf";
+            System.Diagnostics.Process.Start(filename);
         }
 
         private void label10_Click(object sender, EventArgs e)
