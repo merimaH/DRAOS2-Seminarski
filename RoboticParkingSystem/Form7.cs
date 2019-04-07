@@ -481,7 +481,7 @@ namespace RoboticParkingSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string filename = "Help1.pdf";
+            string filename = "HelpAplikacija.pdf";
             System.Diagnostics.Process.Start(filename);
         }
     }
