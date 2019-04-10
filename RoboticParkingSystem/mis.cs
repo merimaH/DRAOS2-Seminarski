@@ -224,6 +224,9 @@ namespace RoboticParkingSystem
                     nazad.Visible = false;
                     poruka.Visible = true;
 
+                    napredpanel.Visible = false;
+                    nazadpanel.Visible = false;
+                    moveObj1.Visible = false;
                     pictureBox2.Visible = true;
                     
                 }
